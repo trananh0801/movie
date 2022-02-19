@@ -1,0 +1,40 @@
+﻿/*menu-admin*/
+*{
+    font-family: sans-serif;
+    margin: 0px;
+}
+.menu-admin {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    background-color: #04AA6D;
+    color: #fff;
+    padding: 10px; 
+}
+.logo-admin {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.trangchu {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.user {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+/*main-admin*/
+.main-admin {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.menu-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.content-right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
