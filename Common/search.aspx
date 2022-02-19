@@ -9,7 +9,7 @@
             </div>
             <div style="text-align: center;">
                 <input type="text" placeholder="Search.." name="search" style="width: 500px; height: 50px;">
-                <button type="submit" style="width: 35px; height: 50px;"><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn-search"><i class="fa fa-search" style="color: #fff"></i></button>
             </div>
             <div class="wrapper">
                 <div class="item">

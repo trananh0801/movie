@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="title">
-            <h2>TẠO BÀI VIẾT - 123
+            <h2>TẠO BÀI VIẾT
             </h2>
         </div>
         <div class="form">
