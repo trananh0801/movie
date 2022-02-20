@@ -19,19 +19,19 @@
         <div>
             <div class="menu-admin">
                 <div class="logo-admin">
-                    <b>MOVIENEWS</b>
+                    <b><img src="../Support/Img/logo.png" alt="logo"" align="left" width="10%">MOVIENEWS</b>
                 </div>
                 <div class="trangchu">
-                    <a href="#">Trang chủ</a>
+                    <a href="/Common/home.aspx">Trang chủ</a>
                 </div>
                 <div class="user">
-                    <b>Tran Anh</b>
+                    <b><img src="../Support/Css/admin_post.css" alt="avt"/>Tran Anh</b>
                 </div>
             </div>
             <div class="main-admin">
                 <div class="menu-left">
                     <div class="quanlybv">
-                        <a href="#" style="font-weight: 100">Quản lý bài viết</a>
+                        <a href="/Admin/admin_post.aspx" style="font-weight: 100">Quản lý bài viết</a>
                     </div>
                     <div class="quanlytv">
                         <a href="#" style="font-weight: 700">Quản lý thành viên</a>

@@ -48,7 +48,7 @@
 
 
         <div class="title">
-            <h2>
+            <h2 id="phimchieurap">
                 PHIM CHIẾU RẠP
             </h2>
         </div>
@@ -93,7 +93,7 @@
 
 
         <div class="title">
-            <h2>
+            <h2 id="phimle">
                 PHIM LẺ
             </h2>
         </div>
@@ -140,7 +140,7 @@
 
 
         <div class="title">
-            <h2>
+            <h2 id="phimbo">
                 PHIM BỘ
             </h2>
         </div>

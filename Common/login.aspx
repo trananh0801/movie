@@ -30,7 +30,7 @@
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
-            <button type="button" class="cancelbtn">Quay lại trang chủ</button>
+            <button type="button" class="cancelbtn"> <a href="/Common/home.aspx"> Quay lại trang chủ </a></button>
             <span class="psw">Quên <a href="#">mật khẩu?</a></span>
         </div>
     </form>

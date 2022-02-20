@@ -19,13 +19,13 @@
         <div>
             <div class="menu-admin">
                 <div class="logo-admin">
-                    <b>MOVIENEWS</b>
+                    <b><img src="../Support/Img/logo.png" alt="logo"" align="left" width="10%"> MOVIENEWS</b>
                 </div>
                 <div class="trangchu">
-                    <a href="#">Trang chủ</a>
+                    <a href="/Common/home.aspx">Trang chủ</a>
                 </div>
                 <div class="user">
-                    <b>Tran Anh</b>
+                    <b><img src="../Support/Css/admin_post.css" alt="avt"/>Tran Anh</b>
                 </div>
             </div>
             <div class="main-admin">
@@ -34,7 +34,7 @@
                         <a href="#">Quản lý bài viết</a>
                     </div>
                     <div class="quanlytv">
-                        <a href="#">Quản lý thành viên</a>
+                        <a href="/Admin/admin_member.aspx">Quản lý thành viên</a>
                     </div>
                 </div>
                 <div class="content-right">

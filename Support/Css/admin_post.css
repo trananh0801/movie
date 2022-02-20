@@ -10,6 +10,7 @@
 .logo-admin {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-template-columns: 15% 70% 15%;
 }
 
 .trangchu {
