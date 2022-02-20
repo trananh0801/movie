@@ -62,7 +62,11 @@
     <Content Include="Admin\admin_post.aspx" />
     <Content Include="Admin\post.aspx" />
     <Content Include="Common\detail.aspx" />
+    <Content Include="Common\latestNews.aspx" />
+    <Content Include="Common\movieTheaters.aspx" />
+    <Content Include="Common\oddMovie.aspx" />
     <Content Include="Common\search.aspx" />
+    <Content Include="Common\seriesMovie.aspx" />
     <Content Include="masterLayout.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -120,12 +124,33 @@
     <Compile Include="Common\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Common\latestNews.aspx.cs">
+      <DependentUpon>latestNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\latestNews.aspx.designer.cs">
+      <DependentUpon>latestNews.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Common\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\movieTheaters.aspx.cs">
+      <DependentUpon>movieTheaters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\movieTheaters.aspx.designer.cs">
+      <DependentUpon>movieTheaters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\oddMovie.aspx.cs">
+      <DependentUpon>oddMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\oddMovie.aspx.designer.cs">
+      <DependentUpon>oddMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -140,6 +165,13 @@
     </Compile>
     <Compile Include="Common\search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\seriesMovie.aspx.cs">
+      <DependentUpon>seriesMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\seriesMovie.aspx.designer.cs">
+      <DependentUpon>seriesMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="masterLayout.Master.cs">
       <DependentUpon>masterLayout.Master</DependentUpon>
