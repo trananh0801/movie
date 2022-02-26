@@ -15,6 +15,9 @@ namespace MovieNews
         string tendangnhap;
         string matkhau;
         string email;
+        string hoten;
+        string ngaysinh;
+        string gioitinh;
 
         public string HoTen
         {
