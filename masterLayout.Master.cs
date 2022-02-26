@@ -11,7 +11,15 @@ namespace MovieNews
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int luottruycap = (Convert.ToInt32(Application["luottruycap"]));
+            soluottruycap.InnerHtml = luottruycap + " lượt truy cập";
+            Application["luottruycap"] = luottruycap + 1;
 
+            if (Request.Form["dangxuat"] == "Đăng xuất")
+            {
+                Session["username"] = null;
+                Response.Redirect("/Common/login.aspx");
+            }
         }
     }
 }

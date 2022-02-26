@@ -7,6 +7,7 @@
     <title>ADMIN - Quản lý bài viết</title>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
     <link rel="stylesheet" href="../Support/Css/admin_post.css" />
+    <link rel="stylesheet" href="../Support/fontawesome/css/all.min.css"/>
     <style>
         * {
             font-family: sans-serif;
@@ -19,22 +20,31 @@
         <div>
             <div class="menu-admin">
                 <div class="logo-admin">
+                    <span>
+                        <i class="fas fa-user-shield"></i>&nbsp;
+                    </span>
                     <b>MOVIENEWS</b>
                 </div>
                 <div class="trangchu">
-                    <a href="#">Trang chủ</a>
+                    <span>
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <a href="/Common/home.aspx" class="admin-home">&nbsp;Trang chủ</a>
                 </div>
                 <div class="user">
-                    <b>Tran Anh</b>
+                    <i class="fas fa-user"></i><b id="admin" runat="server"></b>
                 </div>
             </div>
             <div class="main-admin">
                 <div class="menu-left">
                     <div class="quanlybv">
+                        <a href="/Admin/post.aspx" style="font-weight: 100">Đăng bài viết</a>
+                    </div>
+                    <div class="quanlybv">
                         <a href="#">Quản lý bài viết</a>
                     </div>
                     <div class="quanlytv">
-                        <a href="#">Quản lý thành viên</a>
+                        <a href="/Admin/admin_member.aspx">Quản lý thành viên</a>
                     </div>
                 </div>
                 <div class="content-right">
@@ -73,9 +83,7 @@
                                         <span>
                                             <button class="sua">Sửa</button>
                                         </span>
-                                        <button class="xoa">
-                                            Xóa
-                                        </button>
+                                        <button class="xoa" style="margin-left: 2px;">Xóa</button>
                                     </td>
                                 </tr>
                             </tbody>

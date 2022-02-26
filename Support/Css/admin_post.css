@@ -10,6 +10,7 @@
 .logo-admin {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-template-columns: 15% 70% 15%;
 }
 
 .trangchu {
@@ -21,8 +22,11 @@
     grid-column-start: 3;
     grid-column-end: 4;
 }
-
-
+.admin-home{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
 /*main-admin*/
 .main-admin {
     display: grid;
@@ -45,29 +49,29 @@
     border-bottom: 1px solid #555;
 }
 
-    .quanlybv > a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 700;
-    }
+.quanlybv > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
 
-        .quanlybv > a:hover {
-            color: #04AA6D;
-        }
+.quanlybv > a:hover {
+    color: #04AA6D;
+}
 
 .quanlytv {
     padding: 10px 0px 10px 20px;
     border-bottom: 1px solid #555;
 }
 
-    .quanlytv > a {
-        text-decoration: none;
-        color: #000;
-    }
+.quanlytv > a {
+    text-decoration: none;
+    color: #000;
+}
 
-        .quanlytv > a:hover {
-            color: #04AA6D;
-        }
+.quanlytv > a:hover {
+    color: #04AA6D;
+}
 
 .dsbv {
     padding: 20px;
