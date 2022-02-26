@@ -7,6 +7,7 @@
     <title>ADMIN - Quản lý thành viên</title>
     <link rel="stylesheet" href="../Support/Css/admin_post.css"/>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
+    <link rel="stylesheet" href="../Support/fontawesome/css/all.min.css"/>
     <style>
         * {
             font-family: sans-serif;
@@ -19,17 +20,26 @@
         <div>
             <div class="menu-admin">
                 <div class="logo-admin">
-                    <b><img src="../Support/Img/logo.png" alt="logo"" align="left" width="10%">MOVIENEWS</b>
+                    <span>
+                        <i class="fas fa-user-shield"></i>&nbsp;
+                    </span>
+                    <b>MOVIENEWS</b>
                 </div>
                 <div class="trangchu">
-                    <a href="/Common/home.aspx">Trang chủ</a>
+                    <span>
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <a href="/Common/home.aspx" class="admin-home">&nbsp;Trang chủ</a>
                 </div>
                 <div class="user">
-                    <b><img src="../Support/Css/admin_post.css" alt="avt"/>Tran Anh</b>
+                    <i class="fas fa-user"></i><b id="admin" runat="server"></b>
                 </div>
             </div>
             <div class="main-admin">
                 <div class="menu-left">
+                    <div class="quanlybv">
+                        <a href="/Admin/post.aspx" style="font-weight: 100">Đăng bài viết</a>
+                    </div>
                     <div class="quanlybv">
                         <a href="/Admin/admin_post.aspx" style="font-weight: 100">Quản lý bài viết</a>
                     </div>
@@ -55,30 +65,8 @@
                                     <th>Tác vụ</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        Tran Anh
-                                    </td>
-                                    <td>8/1/2001</td>
-                                    <td>Nữ</td>
-                                    <td> 
-                                        18/2/2022
-                                    </td>
-                                    <td>Tran Anh</td>
-                                    <td>
-                                        mganh828@gmail.com
-                                    </td>
-                                    <td>
-                                        <span>
-                                            <button class="sua">Sửa</button>
-                                        </span>
-                                        <button class="xoa">
-                                            Xóa
-                                        </button>
-                                    </td>
-                                </tr>
+                            <tbody id="tbody" runat="server">
+                                
                             </tbody>
                         </table>
                     </div>

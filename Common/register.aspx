@@ -6,36 +6,53 @@
 <head runat="server">
     <title>MovieNews - Đăng ký</title>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
-    <link rel="stylesheet" href="../Support/Css/login.css">
+    <link rel="stylesheet" href="../Support/Css/login.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="imgcontainer">
-            <img src="../Support/Img/avataDefault.png" alt="Avatar" class="avatar">
+            <img src="../Support/Img/avataDefault.png" alt="Avatar" class="avatar" />
         </div>
 
         <div class="container">
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Nhập email" name="email" required>
+            <input type="text" placeholder="Nhập email" name="email" value="" id="email" required />
+            
 
             <label for="hoten"><b>Họ tên</b></label>
-            <input type="text" placeholder="Nhập họ tên" name="hoten" required>
+            <input type="text" placeholder="Nhập họ tên" name="hoten" value="" id="hoten" required />
+
+            <label for=""><b>Giới tính</b></label>
+            <br />
+            <div style="padding: 5px; border: 1px solid #ccc; margin: 10px 0px 10px 0px">
+                <input type="radio" id="nam" name="gioitinh" value="Nam" runat="server" />
+                <label for="nam">Nam</label>
+
+                <input type="radio" id="nu" name="gioitinh" value="Nữ" runat="server" />
+                <label for="nu" style="margin-bottom: 5px">Nữ</label>
+                <br />
+            </div>
+
+            <label for=""><b>Ngày sinh</b></label> <br />
+            <input type="date" id="ngaysinh" name="ngaysinh" style="border-color: #ccc; margin: 10px 0px 10px 0px" /> <br />
 
             <label for="uname"><b>Tên đăng nhập</b></label>
-            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" required>
+            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" value="" id="uname" required />
 
             <label for="psw"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+            <input type="password" placeholder="Nhập mật khẩu" name="psw" value="" id="psw" required />
 
             <label for="cfpsw"><b>Xác nhận mật khẩu</b></label>
-            <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" required>
+            <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw" required />
 
-            <button type="submit">Đăng ký</button>
-            
+            <p style="color: red; font-style: italic" runat="server" id="errorEmail"></p>
+            <button type="submit" value="Đăng ký" id="dangky" name="dangky">Đăng ký</button>
+
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
-            <button type="button" class="cancelbtn"><a href="/Common/home.aspx">Quay lại trang chủ</a></button>
+            <button type="button" class="cancelbtn"><a href="/Common/home.aspx" class="backHome">Quay lại trang chủ</a></button>
+            <button type="button" class="cancelbtn" style="background-color:#04AA6D"><a href="/Common/login.aspx" class="backHome">Quay lại đăng nhập</a></button>
         </div>
     </form>
 </body>
