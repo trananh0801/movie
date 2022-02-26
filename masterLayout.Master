@@ -33,7 +33,6 @@
                         <%if (Session["username"] != null){ %>
                         <li>
                             <button type="submit" value="Đăng xuất" name="dangxuat" id="dangxuat" runat="server" >Đăng xuất</button>
-
                         </li>
                         <%}%>
                     </ul>
