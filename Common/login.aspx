@@ -17,10 +17,10 @@
 
         <div class="container">
             <label for="uname"><b>Tên đăng nhập</b></label>
-            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" id="uname" runat="server" required/>
+            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" id="uname" runat="server" />
 
             <label for="psw"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Nhập mật khẩu" name="psw" id="psw" runat="server" required/>
+            <input type="password" placeholder="Nhập mật khẩu" name="psw" id="psw" runat="server" />
 
             <p style="color: red; font-style: italic" runat="server" id="errorTK"></p>
             <button type="submit" value="Đăng nhập" name="dangnhap" id="dangnhap" runat="server" >Đăng nhập</button>
@@ -37,4 +37,17 @@
         </div>
     </form>
 </body>
+    <script>
+        function validate() {
+            tdn = document.getElementById("uname").value;
+            pass = document.getElementById("pass").value;
+            check = true;
+
+            if (tdn == "" || pass == "") {
+                document.getElementById("errorTK").innerHTML = "Vui lòng nhập đủ thông tin!";
+                check = false;
+            }
+            return check;
+        }
+    </script>
 </html>

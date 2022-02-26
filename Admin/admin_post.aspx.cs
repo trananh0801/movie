@@ -11,7 +11,10 @@ namespace MovieNews.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            admin.InnerHtml = "Xin chào " + Session["username"];
+            if (Session["username"] != "admin")
+            {
+                Response.Redirect("../page404.html");
+            }
         }
     }
 }

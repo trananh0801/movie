@@ -10,42 +10,37 @@ namespace MovieNews.Common
     public partial class register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        { 
+        }
+        protected void dangky_Click(object sender, EventArgs e)
         {
             List<thanhvien> danhsach = (List<thanhvien>)Application["danhsachtv"];
-            if (IsPostBack)
+            int checkEmail = 0;
+            int checkUname = 0;
+            foreach (thanhvien tv1 in danhsach)
             {
-                if (Request.Form["dangky"] == "Đăng ký")
+                if (tv1.Email == Request.Form["email"] || tv1.TenDangNhap == Request.Form["uname"])
                 {
-                    int checkEmail = 0;
-                    int checkUname = 0;
-                    foreach (thanhvien tv1 in danhsach)
-                    {
-                        if(tv1.HoTen == Request.Form["hoten"] || tv1.TenDangNhap == Request.Form["uname"])
-                        {
-                            checkEmail = 1;
-                            checkUname = 1;
-                        }
-                    }
-                    if( checkEmail == 0 || checkUname == 0)
-                    {
-                        thanhvien tv = new thanhvien();
-                        tv.Email = Request.Form["email"];
-                        tv.HoTen = Request.Form["hoten"];
-                        tv.NgaySinh = Request.Form["ngaysinh"];
-                        tv.GioiTinh = Request.Form["gioitinh"];
-                        tv.TenDangNhap = Request.Form["uname"];
-                        tv.MatKhau = Request.Form["psw"];
-                        tv.NgayThamGia = DateTime.Now.ToString("dd/MM/yyyy");
-                        danhsach.Add(tv);
-                        Application["danhsachtv"] = danhsach;
-                        Response.Redirect("login.aspx");
-                    }
-                    else
-                    {
-                        errorEmail.InnerHtml = "Tài khoản đã tồn tại!";
-                    }
+                    checkEmail = 1;
+                    checkUname = 1;
+                    errorEmail.InnerHtml = "Tài khoản đã tồn tại!";
                 }
             }
+            if (checkEmail == 0 && checkUname == 0)
+            {
+                thanhvien tv = new thanhvien();
+                tv.Email = Request.Form["email"];
+                tv.HoTen = Request.Form["hoten"];
+                tv.NgaySinh = Request.Form["ngaysinh"];
+                tv.GioiTinh = Request.Form["gioitinh"];
+                tv.TenDangNhap = Request.Form["uname"];
+                tv.MatKhau = Request.Form["psw"];
+                tv.NgayThamGia = DateTime.Now.ToString("dd/MM/yyyy");
+                danhsach.Add(tv);
+                Application["danhsachtv"] = danhsach;
+                Response.Redirect("login.aspx");
+            }
+            
         }
     }
 }

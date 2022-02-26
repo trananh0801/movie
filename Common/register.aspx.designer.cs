@@ -24,6 +24,15 @@ namespace MovieNews.Common
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// dinhdangEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dinhdangEmail;
+
+        /// <summary>
         /// nam control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,24 @@ namespace MovieNews.Common
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton nu;
 
         /// <summary>
+        /// validatePass6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl validatePass6;
+
+        /// <summary>
+        /// validateRepass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl validateRepass;
+
+        /// <summary>
         /// checkTrong control.
         /// </summary>
         /// <remarks>
@@ -58,5 +85,14 @@ namespace MovieNews.Common
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorEmail;
+
+        /// <summary>
+        /// dangky control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button dangky;
     }
 }

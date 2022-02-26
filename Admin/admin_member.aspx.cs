@@ -11,6 +11,10 @@ namespace MovieNews.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] != "admin")
+            {
+                Response.Redirect("../page404.html");
+            }
             List<thanhvien> danhsach = (List<thanhvien>)Application["danhsachtv"];
             string chuoi = "";
             admin.InnerHtml = "Xin chào " +  Session["username"];

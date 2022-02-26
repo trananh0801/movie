@@ -111,7 +111,6 @@
     <Compile Include="Admin\post.aspx.designer.cs">
       <DependentUpon>post.aspx</DependentUpon>
     </Compile>
-    <Compile Include="baiviet.cs" />
     <Compile Include="Common\detail.aspx.cs">
       <DependentUpon>detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

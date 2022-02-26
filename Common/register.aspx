@@ -7,17 +7,18 @@
     <title>MovieNews - Đăng ký</title>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
     <link rel="stylesheet" href="../Support/Css/login.css" />
-    <script src="../Support/Js/register.js"></script>
+    
 </head>
 <body>
-    <form id="form1" runat="server" onsubmit="return validate();">
+    <form method="post" id="form1" runat="server" onsubmit="return validate();">
         <div class="imgcontainer">
             <img src="../Support/Img/avataDefault.png" alt="Avatar" class="avatar" />
         </div>
 
         <div class="container">
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Nhập email" name="email" value="" id="email"  />
+            <input type="text" placeholder="Nhập email" name="email" id="email" class="email" />
+            <p style="color: red; font-style: italic" runat="server" id="dinhdangEmail"></p>
             
 
             <label for="hoten"><b>Họ tên</b></label>
@@ -39,17 +40,18 @@
 
             <label for="uname"><b>Tên đăng nhập</b></label>
             <input type="text" placeholder="Nhập tên đăng nhập" name="uname" value="" id="uname"  />
+            <p style="color: red; font-style: italic" runat="server" id="validatePass6"></p>
 
             <label for="psw"><b>Mật khẩu</b></label>
             <input type="password" placeholder="Nhập mật khẩu" name="psw" value="" id="psw"  />
+            <p style="color: red; font-style: italic" runat="server" id="validateRepass"></p>
 
             <label for="cfpsw"><b>Xác nhận mật khẩu</b></label>
             <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw"  />
 
             <p style="color: red; font-style: italic" runat="server" id="checkTrong"></p>
             <p style="color: red; font-style: italic" runat="server" id="errorEmail"></p>
-            <button type="submit" value="Đăng ký" id="dangky" name="dangky">Đăng ký</button>
-
+            <asp:Button value="Đăng ký" id="dangky" onclick="dangky_Click" text="Đăng ký" runat="server" />
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
@@ -58,5 +60,46 @@
         </div>
     </form>
 </body>
-    
+    <script>
+        function validate() {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            email = document.getElementById("email").value;
+            hoten = document.getElementById("hoten").value;
+            gioitinh = document.getElementById("gioitinh").value;
+            ngaysinh = document.getElementById("ngaysinh").value;
+            tdn = document.getElementById("umane").value;
+            pass = document.getElementById("psw").value;
+            repass = document.getElementById("cfpsw").value;
+
+            check = true;
+            //check trong
+            if (email == "" || hoten == "" || gioitinh == "" || ngaysinh == "" || tdn == "" || pass == "" || repass == "") {
+                document.getElementById("checkTrong").innerHTML = "Vui lòng nhập đủ thông tin!";
+                check = false;
+            }
+
+
+            //validate email
+            if (email.match(mailformat)) {
+                check = true;
+            }
+            else {
+                document.getElementById("dinhdangEmail").innerHTML = "Định dạng email chưa đúng!";
+                check = false;
+            }
+
+
+            //validate pass
+            if (pass < 6) {
+                document.getElementById("validatePass6").innerHTML = "Mật khẩu phải dài hơn 6 ký tự!";
+                check = false;
+            }
+            if (repass != pass) {
+                document.getElementById("validateRepass").innerHTML = "Nhập khớp với mật khẩu bên trên!";
+                check = false;
+            }
+            return check;
+        }
+    </script>
 </html>
