@@ -7,20 +7,21 @@
     <title>MovieNews - Đăng ký</title>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
     <link rel="stylesheet" href="../Support/Css/login.css" />
+    <script src="../Support/Js/register.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit="return validate();">
         <div class="imgcontainer">
             <img src="../Support/Img/avataDefault.png" alt="Avatar" class="avatar" />
         </div>
 
         <div class="container">
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Nhập email" name="email" value="" id="email" required />
+            <input type="text" placeholder="Nhập email" name="email" value="" id="email"  />
             
 
             <label for="hoten"><b>Họ tên</b></label>
-            <input type="text" placeholder="Nhập họ tên" name="hoten" value="" id="hoten" required />
+            <input type="text" placeholder="Nhập họ tên" name="hoten" value="" id="hoten"  />
 
             <label for=""><b>Giới tính</b></label>
             <br />
@@ -37,14 +38,15 @@
             <input type="date" id="ngaysinh" name="ngaysinh" style="border-color: #ccc; margin: 10px 0px 10px 0px" /> <br />
 
             <label for="uname"><b>Tên đăng nhập</b></label>
-            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" value="" id="uname" required />
+            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" value="" id="uname"  />
 
             <label for="psw"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Nhập mật khẩu" name="psw" value="" id="psw" required />
+            <input type="password" placeholder="Nhập mật khẩu" name="psw" value="" id="psw"  />
 
             <label for="cfpsw"><b>Xác nhận mật khẩu</b></label>
-            <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw" required />
+            <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw"  />
 
+            <p style="color: red; font-style: italic" runat="server" id="checkTrong"></p>
             <p style="color: red; font-style: italic" runat="server" id="errorEmail"></p>
             <button type="submit" value="Đăng ký" id="dangky" name="dangky">Đăng ký</button>
 
@@ -56,4 +58,5 @@
         </div>
     </form>
 </body>
+    
 </html>
