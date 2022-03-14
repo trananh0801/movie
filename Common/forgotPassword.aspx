@@ -28,7 +28,7 @@
             <input type="password" placeholder="Nhập lại mật khẩu" name="renewpass" id="renewpass" runat="server" />
             <p style="color: red; font-style: italic" runat="server" id="errorrepass"></p>
             
-            <asp:Button id="forgot" runat="server" onclick="forgot_Click" Text="Đổi mật khẩu" />
+            <asp:Button id="dangnhap" runat="server" onclick="forgot_Click" Text="Đổi mật khẩu" />
             
         </div>
 

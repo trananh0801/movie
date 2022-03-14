@@ -53,7 +53,7 @@
             <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw"  />
             <p style="color: red; font-style: italic" runat="server" id="checkCfPass"></p>
 
-            <asp:Button id="dangky" runat="server" Onclick="dangky_Click" Text="Đăng ký" />
+            <asp:Button id="dangnhap" runat="server" Onclick="dangky_Click" Text="Đăng ký" />
         </div>
 
         <div class="container" style="background-color: #f1f1f1">

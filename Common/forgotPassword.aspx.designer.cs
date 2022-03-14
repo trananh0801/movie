@@ -78,12 +78,12 @@ namespace MovieNews.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorrepass;
 
         /// <summary>
-        /// forgot control.
+        /// dangnhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forgot;
+        protected global::System.Web.UI.WebControls.Button dangnhap;
     }
 }
