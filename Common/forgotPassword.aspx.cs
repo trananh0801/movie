@@ -7,26 +7,28 @@ using System.Web.UI.WebControls;
 
 namespace MovieNews.Common
 {
-    public partial class login : System.Web.UI.Page
+    public partial class forgotPassword : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
-        protected void dangnhap_Click(object sender, EventArgs e)
+        protected void forgot_Click(object sender, EventArgs e)
         {
             List<thanhvien> danhsach = (List<thanhvien>)Application["danhsachtv"];
             foreach (thanhvien tv in danhsach)
             {
-                if (tv.TenDangNhap == Request.Form["uname"] && tv.MatKhau == Request.Form["psw"])
+                if (tv.Email == Request.Form["mail"])
                 {
-                    Session["username"] = Request.Form["uname"];
-                    Response.Redirect("home.aspx");
+                    tv.MatKhau = Request.Form["newpass"];
+                    Response.Redirect("login.aspx");
                 }
-                
+                else
+                {
+                    erroremail.InnerHtml = "Email không tồn tại!";
+                }
 
             }
-            errorTK.InnerHtml = "Tên đăng nhập hoặc mật khẩu sai!";
         }
     }
 }

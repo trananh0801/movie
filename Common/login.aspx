@@ -23,7 +23,7 @@
             <input type="password" placeholder="Nhập mật khẩu" name="psw" id="psw" runat="server" />
 
             <p style="color: red; font-style: italic" runat="server" id="errorTK"></p>
-            <button type="submit" value="Đăng nhập" name="dangnhap" id="dangnhap" runat="server" >Đăng nhập</button>
+            <asp:Button id="dangnhap" runat="server" onclick="dangnhap_Click" Text="Đăng nhập" />
             <label>
                 <input type="checkbox" checked="checked" name="remember" runat="server"/>
                 Nhập mật khẩu
@@ -33,7 +33,7 @@
         <div class="container" style="background-color: #f1f1f1">
             <button type="button" class="cancelbtn"> <a href="/Common/home.aspx" class="backHome"> Quay lại trang chủ </a></button>
             <button type="button" class="cancelbtn"> <a href="/Common/register.aspx" class="backHome"> Bạn chưa có tài khoản? </a></button>
-            <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+            <span class="psw">Quên <a href="forgotPassword.aspx">mật khẩu?</a></span>
         </div>
     </form>
 </body>

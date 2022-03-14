@@ -23,7 +23,7 @@ namespace MovieNews.Common
                 {
                     checkEmail = 1;
                     checkUname = 1;
-                    errorEmail.InnerHtml = "Tài khoản đã tồn tại!";
+                    dinhdangEmail.InnerHtml = "Tài khoản đã tồn tại!";
                 }
             }
             if (checkEmail == 0 && checkUname == 0)

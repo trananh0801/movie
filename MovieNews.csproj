@@ -62,6 +62,7 @@
     <Content Include="Admin\admin_post.aspx" />
     <Content Include="Admin\post.aspx" />
     <Content Include="Common\detail.aspx" />
+    <Content Include="Common\forgotPassword.aspx" />
     <Content Include="Common\latestNews.aspx" />
     <Content Include="Common\movieTheaters.aspx" />
     <Content Include="Common\oddMovie.aspx" />
@@ -87,6 +88,7 @@
     <Content Include="Support\Css\home.css" />
     <Content Include="Support\Css\login.css" />
     <Content Include="Support\Js\login.js" />
+    <Content Include="Support\Js\register.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +119,13 @@
     </Compile>
     <Compile Include="Common\detail.aspx.designer.cs">
       <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\forgotPassword.aspx.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\forgotPassword.aspx.designer.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>

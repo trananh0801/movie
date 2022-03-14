@@ -32,7 +32,7 @@
                     <a href="/Common/home.aspx" class="admin-home">&nbsp;Trang chủ</a>
                 </div>
                 <div class="user">
-                    <i class="fas fa-user"></i><b id="admin" runat="server"></b>
+                    <i class="fas fa-user"></i>&nbsp;<b id="admin" runat="server"></b>
                 </div>
             </div>
             <div class="main-admin">

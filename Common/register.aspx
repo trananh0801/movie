@@ -7,7 +7,7 @@
     <title>MovieNews - Đăng ký</title>
     <link rel="shortcut icon" href="../Support/Img/logo.png" />
     <link rel="stylesheet" href="../Support/Css/login.css" />
-    
+    <script src="../Support/Js/register.js" ></script>
 </head>
 <body>
     <form method="post" id="form1" runat="server" onsubmit="return validate();">
@@ -18,11 +18,12 @@
         <div class="container">
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Nhập email" name="email" id="email" class="email" />
-            <p style="color: red; font-style: italic" runat="server" id="dinhdangEmail"></p>
+            <p style="color: red; font-style: italic" id="dinhdangEmail" runat="server"></p>
             
 
             <label for="hoten"><b>Họ tên</b></label>
             <input type="text" placeholder="Nhập họ tên" name="hoten" value="" id="hoten"  />
+            <p style="color: red; font-style: italic" runat="server" id="dinhdangten"></p>
 
             <label for=""><b>Giới tính</b></label>
             <br />
@@ -34,72 +35,31 @@
                 <label for="nu" style="margin-bottom: 5px">Nữ</label>
                 <br />
             </div>
+            <p style="color: red; font-style: italic" runat="server" id="checkgt"></p>
 
-            <label for=""><b>Ngày sinh</b></label> <br />
-            <input type="date" id="ngaysinh" name="ngaysinh" style="border-color: #ccc; margin: 10px 0px 10px 0px" /> <br />
+            <label for="ngaysinh"><b>Ngày sinh</b></label> <br />
+            <input type="date" id="ngaysinh" name="ngaysinh" value="" style="border-color: #ccc; margin: 10px 0px 10px 0px" /> <br />
+            <p style="color: red; font-style: italic" runat="server" id="checkns"></p>
 
             <label for="uname"><b>Tên đăng nhập</b></label>
             <input type="text" placeholder="Nhập tên đăng nhập" name="uname" value="" id="uname"  />
-            <p style="color: red; font-style: italic" runat="server" id="validatePass6"></p>
+            <p style="color: red; font-style: italic" runat="server" id="checkusername"></p>
 
             <label for="psw"><b>Mật khẩu</b></label>
             <input type="password" placeholder="Nhập mật khẩu" name="psw" value="" id="psw"  />
-            <p style="color: red; font-style: italic" runat="server" id="validateRepass"></p>
+            <p style="color: red; font-style: italic" runat="server" id="validatepass"></p>
 
             <label for="cfpsw"><b>Xác nhận mật khẩu</b></label>
             <input type="password" placeholder="Xác nhận mật khẩu" name="cfpsw" value="" id="cfpsw"  />
+            <p style="color: red; font-style: italic" runat="server" id="checkCfPass"></p>
 
-            <p style="color: red; font-style: italic" runat="server" id="checkTrong"></p>
-            <p style="color: red; font-style: italic" runat="server" id="errorEmail"></p>
-            <asp:Button value="Đăng ký" id="dangky" onclick="dangky_Click" text="Đăng ký" runat="server" />
+            <asp:Button id="dangky" runat="server" Onclick="dangky_Click" Text="Đăng ký" />
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
-            <button type="button" class="cancelbtn"><a href="/Common/home.aspx" class="backHome">Quay lại trang chủ</a></button>
+            <button type="button" class="cancelbtn"><a href="/Common/home.aspx" class="backHome" >Quay lại trang chủ</a></button>
             <button type="button" class="cancelbtn" style="background-color:#04AA6D"><a href="/Common/login.aspx" class="backHome">Quay lại đăng nhập</a></button>
         </div>
     </form>
 </body>
-    <script>
-        function validate() {
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-            email = document.getElementById("email").value;
-            hoten = document.getElementById("hoten").value;
-            gioitinh = document.getElementById("gioitinh").value;
-            ngaysinh = document.getElementById("ngaysinh").value;
-            tdn = document.getElementById("umane").value;
-            pass = document.getElementById("psw").value;
-            repass = document.getElementById("cfpsw").value;
-
-            check = true;
-            //check trong
-            if (email == "" || hoten == "" || gioitinh == "" || ngaysinh == "" || tdn == "" || pass == "" || repass == "") {
-                document.getElementById("checkTrong").innerHTML = "Vui lòng nhập đủ thông tin!";
-                check = false;
-            }
-
-
-            //validate email
-            if (email.match(mailformat)) {
-                check = true;
-            }
-            else {
-                document.getElementById("dinhdangEmail").innerHTML = "Định dạng email chưa đúng!";
-                check = false;
-            }
-
-
-            //validate pass
-            if (pass < 6) {
-                document.getElementById("validatePass6").innerHTML = "Mật khẩu phải dài hơn 6 ký tự!";
-                check = false;
-            }
-            if (repass != pass) {
-                document.getElementById("validateRepass").innerHTML = "Nhập khớp với mật khẩu bên trên!";
-                check = false;
-            }
-            return check;
-        }
-    </script>
 </html>

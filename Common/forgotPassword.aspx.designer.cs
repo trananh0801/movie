@@ -11,7 +11,7 @@ namespace MovieNews.Common
 {
 
 
-    public partial class register
+    public partial class forgotPassword
     {
 
         /// <summary>
@@ -24,93 +24,66 @@ namespace MovieNews.Common
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// dinhdangEmail control.
+        /// mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dinhdangEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText mail;
 
         /// <summary>
-        /// dinhdangten control.
+        /// erroremail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dinhdangten;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl erroremail;
 
         /// <summary>
-        /// nam control.
+        /// newpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton nam;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword newpass;
 
         /// <summary>
-        /// nu control.
+        /// errorpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton nu;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorpass;
 
         /// <summary>
-        /// checkgt control.
+        /// renewpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkgt;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword renewpass;
 
         /// <summary>
-        /// checkns control.
+        /// errorrepass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkns;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorrepass;
 
         /// <summary>
-        /// checkusername control.
+        /// forgot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkusername;
-
-        /// <summary>
-        /// validatepass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl validatepass;
-
-        /// <summary>
-        /// checkCfPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkCfPass;
-
-        /// <summary>
-        /// dangky control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button dangky;
+        protected global::System.Web.UI.WebControls.Button forgot;
     }
 }

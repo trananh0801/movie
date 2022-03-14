@@ -11,7 +11,7 @@ namespace MovieNews.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] != "admin")
+            if ((string)Session["username"] != "admin1")
             {
                 Response.Redirect("../page404.html");
             }

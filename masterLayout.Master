@@ -26,14 +26,12 @@
                         <li><a href="/Common/latestNews.aspx">Tin mới nhất</a></li>
                         <li><a href="/Common/login.aspx">Đăng nhập</a></li>
                         <li><a href="/Common/search.aspx">Tìm kiếm</a></li>
-                        <%if (Session["username"] == "admin")
-                        { %>
+                        <%if ((string)Session["username"] == "admin1"){ %>
                         <li><a href="/Admin/admin_member.aspx">Truy cập admin</a></li>
                         <%}%>
                         <%if (Session["username"] != null){ %>
                         <li>
                             <button type="submit" value="Đăng xuất" name="dangxuat" id="dangxuat" runat="server" >Đăng xuất</button>
-
                         </li>
                         <%}%>
                     </ul>
