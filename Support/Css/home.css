@@ -196,6 +196,57 @@ body {
     border: none;
 }
 
-    .btn-search:hover {
-        background-color: #3CB371;
+.btn-search:hover {
+    background-color: #3CB371;
+}
+
+/*responsive*/
+#toggle {
+    display: none;
+    background: #04AA6D;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1051px) {
+    /*menu*/
+    .list {
+        display: inline !important;
     }
+    .list li{
+        display: inline !important;
+    }
+    #toggle {
+        display: block ;
+    }
+    nav {
+        height: 100% !important;
+        display: none;
+    }
+    .mask {
+        height: 100% !important;
+        text-align: center;
+    }
+
+    /*item*/
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 450px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 930px) {
+    .form{
+        margin: 0px;
+    }
+}
